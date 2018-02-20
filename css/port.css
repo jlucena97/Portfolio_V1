@@ -1,0 +1,561 @@
+/*HTML modificaciones*/
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: .1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul, li{
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  margin:  0;
+  color: white;
+}
+
+
+/*Imagenes*/
+section:nth-of-type(1) {
+  background-image: url("../img/tablet-fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(50%);
+}
+
+#fp-nav ul li a span, 
+.fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+}
+      
+#fp-nav ul li a.active span, 
+.fp-slidesNav ul li a.active span, 
+#fp-nav ul li:hover a.active span, 
+.fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 2px solid #24221F;
+}
+
+
+/* Menu*/
+header img {
+  width: 3.5rem;
+  height: 3.2rem;
+}
+
+.section {
+  text-align: center;
+}
+
+/*Boton Menu*/
+.cerrado, .abierto {
+  width: 50px;
+  height: 10px;
+  padding-right: 5px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
+
+.cerrado i, .abierto i {
+  position: absolute;
+  display: block;
+  height: 5px;
+  background: black;
+  width: 30px;
+  left: 15px;
+  transition: all .4s;
+}
+
+/*Cerrado*/
+.cerrado i:nth-child(1) {
+  top: 2px;
+}
+
+.cerrado i:nth-child(2) {
+  top: 10px;
+}
+
+.cerrado i:nth-child(3) {
+  top: 18px;
+}
+
+/*Abierto*/
+.abierto i:nth-child(1) {
+  top: 15px;
+  transform: rotateZ(45deg);
+}
+
+.abierto i:nth-child(2) {
+  background: transparent;
+}
+
+.abierto i:nth-child(3) {
+  top: 15px;
+  transform: rotateZ(-45deg);
+}
+
+/*Menu*/
+.top {
+    background: rgba(255, 255, 255, 0.4);
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+    display: grid;
+    grid-template-columns: 1fr 6fr 0.25fr;
+    transition: all 1.5s;
+    justify-content: center;
+}
+
+nav {
+  opacity: 0;
+  transition: all 2s;
+}
+
+nav ul {
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  flex: 1;
+}
+
+nav ul li a {
+  display: block;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 10px;
+  transition: all 0.3s;
+  background: #607D8B;
+}
+
+
+nav ul li a:hover {
+   background:#CFD8DC;
+}
+
+nav li.active a {
+  background: #37474F;
+} 
+
+
+/*Primer Section*/
+#nombre {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+#nombre p {
+  color:white;
+  font-size: 15px;
+}
+
+#nombre h2 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  word-spacing: 10px;
+}
+
+section:nth-of-type(1) img {
+  display: none;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 100px;
+  width: 50%;
+  color: white;
+  font-size: 25px;  
+
+  animation-name: blinker;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+/*Contacto Section 1.2*/  
+
+.contacto {
+  background-color: rgba(15,10,10,0.5);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.contacto form {
+  margin-left: 25px;
+  width: 70%;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: white;
+}
+
+.contacto form label {
+   text-align: left;
+}
+
+.contacto form .send {
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  width: 80%;
+  margin: 2rem auto;
+  border: 4px solid white;
+  transition: all 1s;
+}
+
+.contacto .rss{
+  display: grid;
+  grid-template-columns: 2fr;
+  justify-content: center;
+}
+
+.contacto .rss img {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(5px 6px 5px black);
+}
+
+
+/*Section 2 INFO*/
+#info{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+#info h4{
+  color: rgba(10,10,20,0.4);
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 2px 4px 3px grey;
+  letter-spacing: 0.5rem;
+}
+
+#info p{
+  font-size: 15px;
+  line-height: 1.5rem;
+  width: 80%;
+  margin: 0 auto 1.2em auto;
+  text-align: center;
+}
+
+#info img{
+  width: 6rem;
+  height: 6rem;
+  border-radius: 15rem;
+  *box-shadow: 8px 6px 8px grey;
+  margin: 0 auto;
+  filter:drop-shadow(8px 8px 10px gray) grayscale(90%);
+}
+
+#info div {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+
+/*Section 3 Skills*/
+
+section:nth-of-type(3) {
+  background-image: url("../img/skills.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(200%) grayscale(70%);
+}
+
+section:nth-of-type(3) h4 {
+  *color: black;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-shadow: 1rem 1.5rem 1rem grey;
+}
+
+#skills p {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: repeat(3,auto);
+  grid-gap: 1rem;
+  grid-row-gap: 4rem;
+  margin:0 20px;
+}
+
+#skills svg{
+  width: 4rem;
+  height: 4rem;
+}
+
+.resaltado {
+  box-shadow: 1rem  2rem 3rem grey;
+}
+
+.peity path:first-child {
+  fill: rgb(0, 242, 255);
+  filter: brightness(100%);
+}
+
+.peity path {
+  fill: rgba(0, 232, 245,0.5);
+  opacity: 0.9;
+}
+
+
+/*Section 4 Trabajos*/
+/*Página principal*/
+section:nth-of-type(4) h2 {
+  color: black;
+  text-shadow: 0.3rem 0.4rem 0.5rem black;
+  font-size: 2.2rem;
+}
+
+.lateral {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  justify-content: center;
+}
+
+.lateral img{
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.5rem;
+  animation-name: imgblink;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.left {
+  transform: rotate(90deg);
+  margin-left: 1.5rem;
+}
+
+.right {
+  transform: rotate(270deg);
+}
+
+@keyframes imgblink {  
+    0% { opacity: 1.0; }
+    25% { opacity: 0.5; }
+    50% { opacity: 0.0; }
+    75% { opacity: 0.5; }
+    100% { opacity: 1.0; }
+}
+
+
+/*Slider*/
+section:nth-of-type(4) .slide h3{
+  position: absolute;
+  top: 25px;
+  width: 25%;
+  text-align: center;
+  font-size: 3rem;
+  color:black;
+  text-shadow: 0.25rem 0.4rem 0.3rem grey;
+}
+
+section:nth-of-type(4) .slide a {
+  font-size: 2rem;
+  display: block;
+  margin-top: 3rem;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000;
+}
+
+/*Fondo Sliders*/
+.trabajo{ 
+  width: 18rem;
+  height: 18rem;
+  margin-top: 2rem;
+}
+
+section:nth-of-type(4) [data-anchor="slide2"]{ 
+  background-color: #69F0AE;
+}
+
+section:nth-of-type(4) [data-anchor="slide4"]{ 
+  background-color: #00E5FF;
+}
+
+/*TABLET*/
+@media (min-width: 720px) {
+  /*FONDO*/
+  section:nth-of-type(1) {
+    background-image: url("../img/tablet-fondo.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(30%);
+  }
+
+  header img {
+    margin-left: 2rem;
+  }
+
+  nav ul li a {
+    font-size: 1.7rem;
+  }
+  
+
+  /*Nombre Titulo*/
+  #nombre p {
+    font-size: 2rem;
+  }
+
+  #nombre h2 {
+    font-size: 3rem;
+  }
+
+  .scroll {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  /*Contactos*/
+  .contacto {
+    width: 80%;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1.5fr;
+  }
+  
+  .contacto h3 {
+    font-size: 25px;
+  }
+
+  .contacto form {
+    width: 75%;
+    height: 100%;
+  }
+
+  .contacto form label {
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  
+  .contacto form .send {
+    margin-top: 1.5rem auto;
+  }
+
+  .contacto form .send:hover{
+    background-color: white;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+    border-color: transparent;
+  }
+
+  .contacto .rss{
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
+  }
+
+  .contacto .rss img {
+    margin: 50% auto;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .contacto .rss img:hover {
+    filter: drop-shadow(1px 1px 1px black);
+  }
+
+  /*INFO*/
+  #info {
+    grid-gap: 2rem;
+  }
+
+  #info img {
+    width: 7rem;
+    height: 7rem;
+  }
+  
+  #info h4 {
+    font-size: 30px;
+    text-shadow: 2px 2px 5px grey;
+  }
+  
+  #info p{
+    font-size: 18px;
+  }
+  
+
+  /*SKILLS*/
+  #skills p {
+    font-size: 25px;
+  }
+
+  #skills svg {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  /*Projects*/
+  section:nth-of-type(4) h2 {
+    font-size: 3rem;
+  }
+
+  .left {
+    margin-left: 8rem;
+  }
+}
+/*Ordenador*/
+@media (min-width: 1200px){
+    
+    header img {
+      margin-left: 4rem;
+    }
+
+    /*Contacto*/
+    .contacto {
+      grid-template-columns: 2fr 1.5fr;
+      width: 50%;
+    }
+    .contacto h3 {
+      font-size: 30px;
+    } 
+
+    .contacto form {
+      width: 80%;
+      height: 95%;
+    }
+
+    .contacto .rss{
+      grid-template-columns: 0.5fr 0.5fr;
+      grid-gap: 1rem;
+    }
+
+    .contacto .rss img {
+      width: 6rem;
+      height: 6rem;
+      margin: 50% auto;
+    }
+}
